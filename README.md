@@ -1,5 +1,5 @@
 # C.explorer
-A project and Research assessment web application for students
+A project and Research assessment web application for students																			   																																
 INSTALLING APPLICATION...
 RUN XAMPP and open phpmyadmin
 create a new database and name it Cexplorer
