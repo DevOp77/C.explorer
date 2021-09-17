@@ -155,6 +155,7 @@ ini_set('display_errors', 1);
                                           <div class='col-xs-4'>
                                                 <?php
                                                     echo "<i class='fa fa-file-o'></i> <a href='FileInfo.php?pid=".$row['id']."'>".$row['title']."</a>";
+                                                    echo "<small>Submitted by ".$row['submitedby']"</small>"
 
                                                 ?>
                                           </div>
