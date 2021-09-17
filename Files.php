@@ -243,6 +243,8 @@ ini_set('display_errors', 1);
                                 <?php
                                       foreach($archive as $row)
                                       {
+                                         $datesubmitted = new DateTime($row['datesubmitted']);
+                                          $datesubmitted = $datesubmitted->format('l jS F, Y');
                                         $photo = "";
 
                                         // If the user already has a predefined photo 
@@ -261,7 +263,7 @@ ini_set('display_errors', 1);
                                     <div class='row' >
                                         <div class='col-xs-12'>
                                             <?php
-                                                echo "<div ><strong><i class='fa fa-file-o'></i> <a href='FileInfo.php?pid=".$row['paperid']."'>".$row['title']."</a></strong><div style='padding-top:10px;'>".nl2br($row['comment'])."</div></div>";
+                                                echo "<div ><strong><i class='fa fa-file-o'></i> <a href='FileInfo.php?pid=".$row['paperid']."'>".$row['title']."</a> submitted on:$datesubmitted. </strong><div style='padding-top:10px;'>".nl2br($row['comment'])."</div></div>";
                                                 echo "<div><i class='fa fa-paperclip'></i> <a href='uploads/".$row['reviewedfile']."'>".$row['reviewedfile']."</a></div>";
                                                 echo "<div style='text-align:right;background-color:white;'><a href='Miembro.php?mp=".$code1.'-'.$row['memberid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a> <img class='img-circle' style='width:50px;height:50px;' src='".$photo."'><br/></div>"
                                              ?>
